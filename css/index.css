@@ -1,0 +1,614 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #EEE;
+    overflow: hidden;
+}
+
+html {
+    font-size: 100px;
+}
+
+.main {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*--music--*/
+.music {
+    display: none;
+    position: absolute;
+    top: .2rem;
+    right: .2rem;
+    z-index: 1000;
+    width: .6rem;
+    height: .6rem;
+    background: url("../music.svg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.music audio {
+    display: none;
+}
+
+.music.move {
+    -webkit-animation: musicMove .5s linear 0s infinite both;
+    animation: musicMove .5s linear 0s infinite both;
+}
+
+@-webkit-keyframes musicMove {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes musicMove {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/*--swiper--*/
+.swiper-container, .swiper-wrapper, .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+.swiper-slide img {
+    position: absolute;
+    opacity: 0;
+}
+
+/*--slide1--*/
+.slide1 {
+    background: url("../xiazai%20tu/005.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide1 div{
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.9rem;
+    color: red;
+    margin: 0 auto;
+}
+
+
+
+
+
+#page1 div:nth-child(1) {
+    -webkit-animation: bounceInLeft 1s linear 0s both;
+    animation: bounceInLeft 1s linear 0s both;
+}
+
+#page1 div:nth-child(2) {
+    -webkit-animation: bounceInRight 1s linear .3s both;
+    animation: bounceInRight 1s linear .3s both;
+}
+
+#page1 div:nth-child(3) {
+    -webkit-animation: bounceInUp 1s linear .6s both;
+    animation: bounceInUp 1s linear .6s both;
+}
+
+#page1 div:nth-child(4) {
+    -webkit-animation: bounceInUp 1s linear .9s both;
+    animation: bounceInUp 1s linear .9s both;
+}
+
+/*--slide2--*/
+.slide2 {
+    background: url("../xiazai%20tu/0021.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#container{
+    perspective: 2000px;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+#container .box{
+    transform-style: preserve-3d;
+    width: 5rem;
+    height: 5rem;
+    transition: transform 1s;
+    transform-origin: 0 50%;
+}
+#container .box .d1{
+    width: 5rem;
+    height: 5rem;
+    background: url("../xiazai%20tu/002.jpg") no-repeat;
+    background-size: inherit;
+    background-position: -37px -221px;
+    border-radius: 5px;
+    transform: translateZ(253px);
+    text-align: center;
+}
+#wz1 p:nth-child(odd) {
+    -webkit-animation: wzodd .3s ease infinite;
+}
+#wz1 p:nth-child(even) {
+    -webkit-animation: wzeven .3s ease infinite;
+}
+#container .box .d1 p{
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #FFF
+}
+#container .box .d2{
+    display: block;
+    width: 5rem;
+    height: 8rem;
+    background: url("../xiazai%20tu/0021.jpg") no-repeat;
+    background-position: -36px -125px;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top:0px;
+    transform: rotateX(-90deg) translateZ(64px);
+}
+#container .box:hover{
+    transform: rotateX(90deg);
+}
+#container .box .d2 .boxa{
+    position: absolute;
+    height: 8rem;
+    width: 5rem;
+    font-size: 0.6rem;
+    text-align: center;
+}
+#container .box .d2 .boxa .box1{
+    transform-style: preserve-3d;
+    height: .8rem;
+    width: 5rem;
+    transition: transform 1s;
+    transform-origin: 50% 0;
+    position: absolute;
+   /* left: 0;
+    top:0;*/
+}
+#container .box .d2 .boxa .box1 .x1{
+    position: absolute;
+    left: 0;
+    top:0px;
+    height: .8rem;
+    width: 5rem;
+ /*   background: red;*/
+    border-radius: 5px;
+    transform: translateZ(162px);
+}
+#container .box .d2 .boxa .box1 .x2{
+    display: block;
+    height: .8rem;
+    width: 5rem;
+/*    background: yellow;*/
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top:0px;
+    transform: rotateY(-90deg) translateZ(160px);
+}
+#container .box .d2 .box1:hover{
+    transform: rotatey(90deg);
+}
+
+#container .box .d2 .boxa .bot1{
+    transform-style: preserve-3d;
+    height: .8rem;
+    width: 5rem;
+    transition: transform 1s;
+    transform-origin: 50% 0;
+    position: absolute;
+    /*left: 0;
+    top:1.6rem;*/
+}
+#container .box .d2 .boxa .bot1 .t1{
+   /* position: absolute;
+    left: 0;
+    top:1.6rem;*/
+    height: .8rem;
+    width: 5rem;
+/*    background: blue;*/
+    border-radius: 5px;
+    transform: translateZ(162px);
+}
+#container .box .d2 .boxa .bot1 .t2{
+    display: block;
+    height: .8rem;
+    width: 5rem;
+  /*  background: orange;*/
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top:0;
+    transform: rotateY(90deg) translateZ(160px);
+}
+#container .box .d2 .bot1:hover{
+    transform: rotatey(-90deg);
+}
+#grxx div:nth-child(1){
+    position: absolute;
+    left: 0;
+    top:0rem;
+}
+#grxx div:nth-child(2){
+    position: absolute;
+    left: 0;
+    top:1.6rem;
+}
+#grxx div:nth-child(3){
+    position: absolute;
+    left: 0;
+    top:3.2rem;
+}
+#grxx div:nth-child(4){
+    position: absolute;
+    left: 0;
+    top:4.8rem;
+}
+#grxx div:nth-child(5){
+    position: absolute;
+    left: 0;
+    top:6.4rem;
+}
+
+
+
+
+
+
+#page2 img:nth-child(1) {
+    -webkit-animation: bounceInLeft 1s linear 0s both;
+    animation: bounceInLeft 1s linear 0s both;
+}
+
+#page2 img:nth-child(2) {
+    -webkit-animation: zoomIn .5s linear 0.3s both;
+    animation: zoomIn .5s linear 0.3s both;
+}
+
+#page2 img:nth-child(3) {
+    -webkit-animation: zoomIn .5s linear 0.6s both;
+    animation: zoomIn .5s linear 0.6s both;
+}
+
+#page2 img:nth-child(4) {
+    -webkit-animation: zoomIn .5s linear 0.9s both;
+    animation: zoomIn .5s linear 0.9s both;
+}
+
+
+.slide3 {
+    background: url("../xiazai%20tu/006.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+
+.slide4 {
+    background: url("../xiazai%20tu/004.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--copy animate css--*/
+@-webkit-keyframes bounceInLeft {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-3000px, 0, 0);
+        transform: translate3d(-3000px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(25px, 0, 0);
+        transform: translate3d(25px, 0, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
+
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes bounceInLeft {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-3000px, 0, 0);
+        transform: translate3d(-3000px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(25px, 0, 0);
+        transform: translate3d(25px, 0, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@-webkit-keyframes bounceInRight {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(3000px, 0, 0);
+        transform: translate3d(3000px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(-25px, 0, 0);
+        transform: translate3d(-25px, 0, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes bounceInRight {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(3000px, 0, 0);
+        transform: translate3d(3000px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(-25px, 0, 0);
+        transform: translate3d(-25px, 0, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@-webkit-keyframes bounceInUp {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 3000px, 0);
+        transform: translate3d(0, 3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes bounceInUp {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 3000px, 0);
+        transform: translate3d(0, 3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@-webkit-keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes wzodd {
+    0% {
+        color:#00aeb0;
+        text-shadow: 0 0 15px;
+    }
+    50%{
+        color:#5892e6;
+        text-shadow: 0 0 15px;
+    }
+    100% {
+        color:#0d47ee;
+        text-shadow: 0 0 15px;
+    }
+}
+@-webkit-keyframes wzeven {
+    0% {
+        color:#0d47ee;
+        text-shadow: 0 0 15px;
+
+    }
+    50%{
+        color:#00aeb0;
+        text-shadow: 0 0 15px;
+    }
+    100% {
+        color:#5892e6;
+        text-shadow: 0 0 15px;
+
+    }
+}
+
+/*在某些设备上，由于屏幕的宽高比例和设计稿的比例严重失调，会出现我们响应式计算的结果不符合最佳预览方案，此时我们针对于特殊的设备用@MEDIA进行微调整即可*/
