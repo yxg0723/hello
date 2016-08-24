@@ -91,9 +91,80 @@ html {
     font-size: 1.9rem;
     color: red;
     margin: 0 auto;
+    font-size: 8em;
+    font-family: 微软雅黑;
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(225, 148, 37, 1)), to(rgba(225, 0, 0, 1)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-
-
+.slide1 .st{
+    width:0.4rem;
+    height:0.4rem;
+    background-color:#fff;
+    display:block;
+    position:absolute;
+    top:1.1rem;
+    right:-4rem;
+    border-radius:4px;
+    animation:star 1s infinite linear;
+    opacity:0;
+}
+#liux .st:after{
+    position:relative;
+    display:block;
+    top:-0.49rem;
+    left:0.23rem;
+    border:2px solid #fff;
+    border-width:0 0 0 1px;
+    width:1rem;
+    height:1rem;
+    content:"";
+    transform:rotate(45deg);
+}
+#liux .blue{
+    background-color:lightskyblue;
+    top:60px;
+    right:600px;
+    animation-delay:0.25s;
+}
+#liux .blue:after{
+    width:200px;
+    height:200px;
+    top:-99px;
+    left:43px;
+    border:2px solid lightskyblue;
+    border-width:0 0 0 1px;
+}
+#liux .pink{
+    background-color:lightpink;
+    top:160px;
+    right:500px;
+    animation:starPink 1s infinite linear;
+    animation-delay:0.5s;
+}
+#liux .pink:after{
+    width:133px;
+    height:133px;
+    top:-65px;
+    left:29px;
+    border:2px solid lightpink;
+    border-width:0 0 0 1px;
+}
+#liux .yellow{
+    background-color:yellow;
+    top:127px;
+    right:261px;
+    animation:starYellow 1s infinite linear;
+    animation-delay:0.75s;
+}
+#liux .yellow:after{
+    width:209px;
+    height:164px;
+    top:-65px;
+    left:29px;
+    border:2px solid yellow;
+    border-width:0 0 0 1px;
+}
 
 
 
@@ -148,7 +219,7 @@ html {
     background-size: inherit;
     background-position: -37px -221px;
     border-radius: 5px;
-    transform: translateZ(253px);
+    transform: translateZ(200px);
     text-align: center;
 }
 #wz1 p:nth-child(odd) {
@@ -172,7 +243,7 @@ html {
     position: absolute;
     left: 0;
     top:0px;
-    transform: rotateX(-90deg) translateZ(64px);
+    transform: rotateX(-90deg) translateZ(50px);
 }
 #container .box:hover{
     transform: rotateX(90deg);
@@ -309,6 +380,116 @@ html {
     background: url("../xiazai%20tu/006.jpg") no-repeat;
     background-size: cover;
 }
+.slide3 #three{
+    width: 100%;
+    height: 100%;
+    perspective: 2000px;
+}
+.slide3 #three .jn{
+    width: 3rem;
+    height: 2rem;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: photoRotate 26s ease-in-out infinite 1s ;
+
+}
+.slide3 #three .jn li{
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 2rem;
+    left: 0.1rem;
+    top: .1rem;
+    line-height: 116px;
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 192, 203, 0.8);
+
+    /*backface-visibility: hidden;*/
+    transition:opacity 1s, transform 1s;
+}
+#three ul:nth-child(1){
+    top: 30%;
+    left: 50%;
+    margin: -1.5rem 0 0 -1.5rem;
+}
+
+.jn li:nth-child(1){
+    -webkit-transform: rotateY(0deg) translateZ(130px);
+    transform: rotateY(0deg) translateZ(130px);
+}
+.jn li:nth-child(2){
+    -webkit-transform: rotateY(60deg) translateZ(130px);
+    transform: rotateY(60deg) translateZ(130px);
+}
+.jn li:nth-child(3){
+    -webkit-transform: rotateY(120deg) translateZ(130px);
+    transform: rotateY(120deg) translateZ(130px);
+}
+.jn li:nth-child(4){
+    -webkit-transform: rotateY(180deg) translateZ(130px);
+    transform: rotateY(180deg) translateZ(130px);
+}
+.jn li:nth-child(5){
+    -webkit-transform: rotateY(240deg) translateZ(130px);
+    transform: rotateY(240deg) translateZ(130px);
+}
+.jn li:nth-child(6){
+    -webkit-transform: rotateY(300deg) translateZ(130px);
+    transform: rotateY(300deg) translateZ(130px);
+}
+#three .yx{
+    width: 5rem;
+    height: 1.5rem;
+    font-size: 20px;
+    background: red;
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    margin: -2.5rem 0 0 -2.5rem;
+}
+.yx span{
+    -moz-animation: loading 1s linear infinite -0.8s;
+    -webkit-animation: loading 1s linear infinite -0.8s;
+    animation: loading 1s linear infinite -0.8s;
+    float: left;
+}
+
+.yx span:nth-child(2){
+    -moz-animation: loading 1s linear infinite -0.2s;
+    -webkit-animation: loading 1s linear infinite -0.2s;
+    animation: loading 1s linear infinite -0.2s;
+}
+.yx span:nth-child(3){
+    -moz-animation: loading 1s linear infinite -0.5s;
+    -webkit-animation: loading 1s linear infinite -0.5s;
+    animation: loading 1s linear infinite -0.5s;
+}
+.yx span:nth-child(4){
+    -moz-animation: loading 1s linear infinite -1.1s;
+    -webkit-animation: loading 1s linear infinite -1.1s;
+    animation: loading 1s linear infinite -1.1s;
+}
+.yx span:nth-child(5){
+    -moz-animation: loading 1s linear infinite -0.36s;
+    -webkit-animation: loading 1s linear infinite -0.36s;
+    animation: loading 1s linear infinite -0.36s;
+}
+.yx span:nth-child(6){
+    -moz-animation: loading 1s linear infinite -0.65s;
+    -webkit-animation: loading 1s linear infinite -0.65s;
+    animation: loading 1s linear infinite -0.65s;
+}
+.yx span:nth-child(7){
+    -moz-animation: loading 1s linear infinite -0.93s;
+    -webkit-animation: loading 1s linear infinite -0.93s;
+    animation: loading 1s linear infinite -0.93s;
+}
+
 
 
 
@@ -316,7 +497,12 @@ html {
     background: url("../xiazai%20tu/004.jpg") no-repeat;
     background-size: cover;
 }
-
+.slide4 div{
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    color: red;
+}
 
 
 
@@ -611,4 +797,155 @@ html {
     }
 }
 
-/*在某些设备上，由于屏幕的宽高比例和设计稿的比例严重失调，会出现我们响应式计算的结果不符合最佳预览方案，此时我们针对于特殊的设备用@MEDIA进行微调整即可*/
+@keyframes photoRotate {
+    0% {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+
+    16.7% {
+        -webkit-transform: rotateY(60deg);
+        transform: rotateY(60deg);
+    }
+    33.3% {
+        -webkit-transform: rotateY(120deg);
+        transform: rotateY(120deg);
+    }
+    41.6% {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+    58.3% {
+        -webkit-transform: rotateY(240deg);
+        transform: rotateY(240deg);
+    }
+    83.4% {
+        -webkit-transform: rotateY(300deg);
+        transform: rotateY(300deg);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@-moz-keyframes loading {
+    0%, 100% {
+        -moz-transform: scale(1) rotateZ(0deg);
+        transform: scale(1) rotateZ(0deg);
+        opacity: 1;
+    }
+
+    26% {
+        -moz-transform: scale(1.1) rotateZ(12deg);
+        transform: scale(1.1) rotateZ(12deg);
+        opacity: .2;
+    }
+
+    76% {
+        -moz-transform: scale(0.8) rotateZ(-8deg);
+        transform: scale(0.8) rotateZ(-8deg);
+        opacity: .6;
+    }
+}
+@-webkit-keyframes loading {
+    0%, 100% {
+        -webkit-transform: scale(1) rotateZ(0deg);
+        transform: scale(1) rotateZ(0deg);
+        opacity: 1;
+    }
+
+    26% {
+        -webkit-transform: scale(1.1) rotateZ(12deg);
+        transform: scale(1.1) rotateZ(12deg);
+        opacity: .2;
+    }
+
+    76% {
+        -webkit-transform: scale(0.8) rotateZ(-8deg);
+        transform: scale(0.8) rotateZ(-8deg);
+        opacity: .6;
+    }
+}
+@keyframes loading {
+    0%, 100% {
+        -moz-transform: scale(1) rotateZ(0deg);
+        -ms-transform: scale(1) rotateZ(0deg);
+        -webkit-transform: scale(1) rotateZ(0deg);
+        transform: scale(1) rotateZ(0deg);
+        opacity: 1;
+    }
+
+    26% {
+        -moz-transform: scale(1.1) rotateZ(12deg);
+        -ms-transform: scale(1.1) rotateZ(12deg);
+        -webkit-transform: scale(1.1) rotateZ(12deg);
+        transform: scale(1.1) rotateZ(12deg);
+        opacity: .2;
+    }
+
+    76% {
+        -moz-transform: scale(0.8) rotateZ(-8deg);
+        -ms-transform: scale(0.8) rotateZ(-8deg);
+        -webkit-transform: scale(0.8) rotateZ(-8deg);
+        transform: scale(0.8) rotateZ(-8deg);
+        opacity: .6;
+    }
+}
+
+@keyframes change{
+    0%{
+        color:#fff;
+    }
+    25%{
+        color:lightskyblue;
+    }
+    50%{
+        color:lightpink;
+    }
+    75%{
+        color:yellow;
+    }
+}
+@keyframes star{
+    0%{
+        opacity:0;
+        transform:scale(0) translate(0,0);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1) translate(-200px,200px);
+    }
+    100%{
+        opacity:0;
+        transform:scale(1) translate(-400px,400px);
+    }
+}
+@keyframes starPink{
+    0%{
+        opacity:0;
+        transform:scale(0) translate(0,0);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1) translate(-300px,300px);
+    }
+    100%{
+        opacity:0;
+        transform:scale(1) translate(-600px,600px);
+    }
+}
+@keyframes starYellow{
+    0%{
+        opacity:0;
+        transform:scale(0) translate(0,0);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1) translate(-300px,300px);
+    }
+    100%{
+        opacity:0;
+        transform:scale(1) translate(-600px,600px);
+    }
+}
