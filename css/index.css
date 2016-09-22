@@ -86,6 +86,7 @@ html {
 }
 
 .slide1 div{
+    display: none;
     width: 2rem;
     height: 2rem;
     font-size: 1.9rem;
@@ -98,92 +99,113 @@ html {
     -webkit-text-fill-color: transparent;
 }
 .slide1 .st{
-    width:0.4rem;
-    height:0.4rem;
+    width:4px;
+    height:4px;
     background-color:#fff;
     display:block;
     position:absolute;
-    top:1.1rem;
-    right:-4rem;
+    top:110px;
+    right:-800px;
     border-radius:4px;
     animation:star 1s infinite linear;
     opacity:0;
 }
-#liux .st:after{
+.slide1 .st:after{
     position:relative;
     display:block;
-    top:-0.49rem;
-    left:0.23rem;
+    top:-49px;
+    left:-23px;
     border:2px solid #fff;
     border-width:0 0 0 1px;
-    width:1rem;
-    height:1rem;
+    width:100px;
+    height:100px;
     content:"";
     transform:rotate(45deg);
 }
-#liux .blue{
-    background-color:lightskyblue;
-    top:60px;
-    right:600px;
-    animation-delay:0.25s;
-}
-#liux .blue:after{
-    width:200px;
-    height:200px;
-    top:-99px;
-    left:43px;
-    border:2px solid lightskyblue;
-    border-width:0 0 0 1px;
-}
-#liux .pink{
-    background-color:lightpink;
-    top:160px;
-    right:500px;
-    animation:starPink 1s infinite linear;
-    animation-delay:0.5s;
-}
-#liux .pink:after{
-    width:133px;
-    height:133px;
-    top:-65px;
-    left:29px;
-    border:2px solid lightpink;
-    border-width:0 0 0 1px;
-}
-#liux .yellow{
+.slide1 .yellow{
     background-color:yellow;
-    top:127px;
-    right:261px;
+    top:1rem;
+    right:4rem;
     animation:starYellow 1s infinite linear;
     animation-delay:0.75s;
 }
-#liux .yellow:after{
-    width:209px;
-    height:164px;
-    top:-65px;
-    left:29px;
+.slide1 .yellow:after{
+    width:2.09rem;
+    height:1.64rem;
+    top:-2.12rem;
+    left:-1.20rem;
     border:2px solid yellow;
-    border-width:0 0 0 1px;
+    border-width:0 0 1px 0;
+}
+
+.slide1 .yellow2{
+    background-color:yellow;
+    top:3rem;
+    right:6rem;
+    animation:starPink 1s infinite linear;
+    animation-delay:0.85s;
+}
+.slide1 .yellow2:after{
+    width:2.09rem;
+    height:1.64rem;
+    top:-2.12rem;
+    left:-1.20rem;
+    border:2px solid yellow;
+    border-width:0 0 1px 0;
+}
+.slide1 .yellow3{
+    background-color:yellow;
+    top:2rem;
+    right:4rem;
+    animation:starPink 1s infinite linear;
+    animation-delay:0.95s;
+}
+.slide1 .yellow3:after{
+    width:2.09rem;
+    height:1.64rem;
+    top:-2.12rem;
+    left:-1.20rem;
+    border:2px solid yellow;
+    border-width:0 0 1px 0;
+}
+.slide1 .yellow4{
+    background-color:yellow;
+    top:4rem;
+    right:8rem;
+    animation:starPink 1s infinite linear;
+    animation-delay:0.75s;
+}
+.slide1 .yellow4:after{
+    width:2.09rem;
+    height:1.64rem;
+    top:-2.12rem;
+    left:-1.20rem;
+    border:2px solid yellow;
+    border-width:0 0 1px 0;
 }
 
 
 
 #page1 div:nth-child(1) {
+    display: block;
     -webkit-animation: bounceInLeft 1s linear 0s both;
     animation: bounceInLeft 1s linear 0s both;
 }
 
 #page1 div:nth-child(2) {
+    display: block;
     -webkit-animation: bounceInRight 1s linear .3s both;
     animation: bounceInRight 1s linear .3s both;
 }
 
 #page1 div:nth-child(3) {
+    display: block;
     -webkit-animation: bounceInUp 1s linear .6s both;
     animation: bounceInUp 1s linear .6s both;
 }
 
 #page1 div:nth-child(4) {
+    display: block;
     -webkit-animation: bounceInUp 1s linear .9s both;
     animation: bounceInUp 1s linear .9s both;
 }
@@ -195,6 +217,7 @@ html {
     position: relative;
 }
 #container{
+/*    display: none;*/
     perspective: 2000px;
     width: 5rem;
     height: 5rem;
@@ -206,6 +229,7 @@ html {
     margin: auto;
 }
 #container .box{
+
     transform-style: preserve-3d;
     width: 5rem;
     height: 5rem;
@@ -355,12 +379,14 @@ html {
 
 
 
-
-/*#page2 img:nth-child(1) {
+/*
+#page2 div:nth-child(1) {
+   /!* display: block;*!/
     -webkit-animation: bounceInLeft 1s linear 0s both;
     animation: bounceInLeft 1s linear 0s both;
-}
+}*/
 
+/*
 #page2 img:nth-child(2) {
     -webkit-animation: zoomIn .5s linear 0.3s both;
     animation: zoomIn .5s linear 0.3s both;
@@ -374,7 +400,8 @@ html {
 #page2 img:nth-child(4) {
     -webkit-animation: zoomIn .5s linear 0.9s both;
     animation: zoomIn .5s linear 0.9s both;
-}*/
+}
+*/
 
 
 
@@ -390,7 +417,7 @@ html {
     height: 100%;
     perspective: 2000px;
 }
-.slide3 #three .jn{
+#page3 #three .jn{
     width: 3rem;
     height: 2rem;
     position: absolute;
@@ -400,7 +427,7 @@ html {
     -webkit-animation: photoRotate 26s ease-in-out infinite 1s ;
 
 }
-.slide3 #three .jn li{
+#page3  #three .jn li{
     display: block;
     position: absolute;
     width: 3rem;
@@ -596,6 +623,56 @@ html {
     background: url("../xiazai%20tu/004.jpg") no-repeat;
     background-size: cover;
 }
+.slide4 .geyan{
+    font-size: 0.5rem;
+    color: #0d47ee;
+    display: none;
+}
+#page4 div:nth-child(1) {
+    display: block;
+    -webkit-animation: bounceInUp 0.2s linear .2s both;
+    animation: bounceInUp 0.2s linear .2s both;
+}
+#page4 div:nth-child(2) {
+    display: block;
+    -webkit-animation: bounceInUp 0.4s linear .2s both;
+    animation: bounceInUp 0.4s linear .2s both;
+}
+#page4 div:nth-child(3) {
+    display: block;
+    -webkit-animation: bounceInUp 0.6s linear .2s both;
+    animation: bounceInUp 0.6s linear .2s both;
+}
+#page4 div:nth-child(4) {
+    display: block;
+    -webkit-animation: bounceInUp 0.8s linear .2s both;
+    animation: bounceInUp 0.8s linear .2s both;
+}
+#page4 div:nth-child(5) {
+    display: block;
+    -webkit-animation: bounceInUp 1s linear .2s both;
+    animation: bounceInUp 1s linear .2s both;
+}
+#page4 div:nth-child(6) {
+    display: block;
+    -webkit-animation: bounceInUp 1.2s linear .2s both;
+    animation: bounceInUp 1.2s linear .2s both;
+}
+#page4 div:nth-child(7) {
+    display: block;
+    -webkit-animation: bounceInUp 1.4s linear .2s both;
+    animation: bounceInUp 1.4s linear .2s both;
+}
+#page4 div:nth-child(8) {
+    display: block;
+    -webkit-animation: bounceInUp 1.6s linear .2s both;
+    animation: bounceInUp 1.6s linear .2s both;
+}
+#page4 div:nth-child(9) {
+    display: block;
+    -webkit-animation: bounceInUp 1.8s linear .2s both;
+    animation: bounceInUp 1.8s linear .2s both;
+}
 
 
 #page4 #s4y{
@@ -627,6 +704,8 @@ html {
     -webkit-animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
+   /* -webkit-animation:spin 3s ease-in-out 0.1s infinite ;
+    animation:spin 3s ease-in-out 0.1s infinite ;*/
 }
 
 #s4y i:nth-child(1) {
@@ -1209,7 +1288,36 @@ html {
         -webkit-transform: translate3d(-4px, -4px, 570px);
     }
 }
-
+#page4 .jsq{
+    width:200px;
+    height:200px;
+    border: 5px #fff solid;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-transition: all .5s ease-in .1s;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+#page4 .jsq #dsq{  color: #fff;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 145px;
+    line-height: 74%;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-transform: translate(-50%, -50%);
+    width: 100%;
+}
+.bigbang{
+    -webkit-transform: scale(10);
+    opacity: 0;
+}
 
 
 
@@ -1719,11 +1827,11 @@ html {
     }
     50%{
         opacity:1;
-        transform:scale(1) translate(-300px,300px);
+        transform:scale(1) translate(300px,300px);
     }
     100%{
         opacity:0;
-        transform:scale(1) translate(-600px,600px);
+        transform:scale(1) translate(600px,600px);
     }
 }
 @keyframes starPink{
@@ -1733,11 +1841,11 @@ html {
     }
     50%{
         opacity:1;
-        transform:scale(1) translate(-300px,300px);
+        transform:scale(1) translate(300px,300px);
     }
     100%{
         opacity:0;
-        transform:scale(1) translate(-600px,600px);
+        transform:scale(1) translate(600px,600px);
     }
 }
 
@@ -1748,11 +1856,11 @@ html {
     }
     50%{
         opacity:1;
-        transform:scale(1) translate(-300px,300px);
+        transform:scale(1) translate(300px,300px);
     }
     100%{
         opacity:0;
-        transform:scale(1) translate(-600px,600px);
+        transform:scale(1) translate(600px,600px);
     }
 }
 @keyframes starYellow{
@@ -1762,10 +1870,10 @@ html {
     }
     50%{
         opacity:1;
-        transform:scale(1) translate(-300px,300px);
+        transform:scale(1) translate(300px,300px);
     }
     100%{
         opacity:0;
-        transform:scale(1) translate(-600px,600px);
+        transform:scale(1) translate(600px,600px);
     }
 }
